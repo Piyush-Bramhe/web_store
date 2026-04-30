@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Store</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Home Page CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= App Bar ================= -->
+<header class="app-bar">
+  <div class="app-bar-inner">
+
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Web Store Logo">
+      <span>Web Store</span>
+    </div>
+
+    <!-- Search -->
+    <div class="appbar-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search apps..."
+        onkeyup="searchApps()"
+      >
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <h1>All Apps. One Web Store 🚀</h1>
+  <p>Made With ❤️ By Piyushh 😎</p>
+</section>
+
+<!-- ================= Apps Grid ================= -->
+<section class="apps-container">
+
+
+    <!-- YT Downloader -->
+  <div class="app-card">
+    <span class="badge">NEW</span>
+    <img src="images/yt.png" alt="YT Playlist Downloader">
+
+    <h3>YT Playlist Downloader</h3>
+    <p>Download full YouTube playlists for personal use</p>
+
+    <a href="app-pages/yt-downloader.html">
+      View Details
+    </a>
+  </div>
+
+
+  <!-- Attendance App -->
+  <div class="app-card">
+    <span class="badge">NEW</span>
+    <img src="images/attendance.png" alt="Attendance App">
+
+    <h3>Attendance App</h3>
+    <p>Smart attendance management for students & teachers</p>
+
+    <a href="app-pages/attendance.html">
+      View Details
+    </a>
+  </div>
+
+  <!-- Notes App -->
+  <div class="app-card">
+    <span class="badge">NEW</span>
+    <img src="images/notes.png" alt="Notes App">
+
+    <h3> College Notes App</h3>
+    <p>Clean, fast & distraction-free note taking app</p>
+
+    <a href="app-pages/notes.html">
+      View Details
+    </a>
+  </div>
+
+
+
+</section>
+
+<!-- ================= Footer ================= -->
+<footer>
+  © 2026 Web Store. All rights reserved - Crafted For Care
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+function searchApps() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.getElementsByClassName("app-card");
+
+  for (let i = 0; i < cards.length; i++) {
+    const title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+    const desc  = cards[i].getElementsByTagName("p")[0].innerText.toLowerCase();
+
+    if (title.includes(input) || desc.includes(input)) {
+      cards[i].style.display = "block";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

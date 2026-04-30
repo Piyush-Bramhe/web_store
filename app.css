@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f2a33;
+  color: white;
+}
+
+/* ===== App Bar ===== */
+.app-bar {
+  background: #0b1f26;
+  padding: 14px 30px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo-area img {
+  height: 36px;
+  margin-right: 10px;
+}
+
+/* ===== Top App Header ===== */
+.app-header {
+  display: flex;
+  gap: 24px;
+  padding: 40px;
+  align-items: center;
+}
+
+.app-header img {
+  width: 120px;
+  border-radius: 24px;
+}
+
+/* App Title Block */
+.app-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title h1 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.app-title .version {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.app-title .publisher {
+  font-size: 14px;
+  color: #00c2ff;
+  margin-top: 6px;
+}
+
+/* ===== Stats + Download ===== */
+.app-actions {
+  padding: 0 40px 30px 40px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 18px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 20px;
+}
+
+/* Download Button */
+.download-box {
+  background: #00a8d6;
+  color: white;
+  padding: 18px 26px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.download-box small {
+  display: block;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ===== Content ===== */
+.content {
+  padding: 40px;
+  max-width: 900px;
+}
+
+.content h2 {
+  margin-bottom: 12px;
+}
+
+.content p,
+.content ul {
+  opacity: 0.9;
+}
+
+.content ul {
+  margin-left: 18px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+
+/* Content alignment improvement */
+.info-block {
+  margin-bottom: 28px;
+}
+
+.info-block h2 {
+  margin-bottom: 10px;
+}
+
+.info-block p {
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 24px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+
+  /* App header stack */
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .app-header img {
+    width: 110px;
+    margin-bottom: 16px;
+  }
+
+  .app-title {
+    align-items: center;
+  }
+
+  .app-title h1 {
+    font-size: 26px;
+  }
+
+  /* Stats wrap */
+  .stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .app-actions {
+    padding: 0 20px 30px 20px;
+    text-align: center;
+  }
+
+  /* Download button full width feel */
+  .download-box {
+    justify-content: center;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Content padding */
+  .content {
+    padding: 30px 20px;
+  }
+
+  .content p,
+  .content ul {
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* App icon bigger */
+  .app-header img {
+    width: 140px;
+  }
+
+  /* App name bigger */
+  .app-title h1 {
+    font-size: 30px;
+  }
+
+  /* Version & publisher */
+  .app-title .version,
+  .app-title .publisher {
+    font-size: 15px;
+  }
+
+  /* Stats numbers */
+  .stat strong {
+    font-size: 22px;
+  }
+
+  .stat {
+    font-size: 13px;
+  }
+
+  /* Download button text */
+  .download-box {
+    font-size: 16px;
+    padding: 20px 28px;
+  }
+
+  .download-box small {
+    font-size: 13px;
+  }
+}
+
+
+
+@media (max-width: 420px) {
+
+  .app-title h1 {
+    font-size: 26px;
+  }
+
+  .app-header img {
+    width: 130px;
+  }
+
+  .download-box {
+    font-size: 15px;
+  }
+}

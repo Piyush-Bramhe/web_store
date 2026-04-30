@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Background ===== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: white;
+}
+
+/* ===== App Bar ===== */
+.app-bar {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.app-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  font-size: clamp(18px, 3.5vw, 22px); /* clamp */
+  font-weight: 600;
+}
+
+.logo-area img {
+  height: clamp(38px, 6vw, 42px); /* clamp */
+  margin-right: 12px;
+}
+
+/* Search */
+.appbar-search input {
+  width: 220px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: clamp(13px, 3vw, 14px); /* clamp */
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 6vw, 40px); /* clamp */
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: clamp(14px, 3.5vw, 16px); /* clamp */
+  opacity: 0.9;
+}
+
+/* ===== Apps Grid ===== */
+.apps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  padding: 50px;
+}
+
+/* ===== App Card ===== */
+.app-card {
+  position: relative;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.92),
+    rgba(235,240,248,0.88)
+  );
+  border-radius: 28px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+  overflow: hidden;
+  color: #1f2933;
+}
+
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.6),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.app-card:hover {
+  transform: translateY(-16px) scale(1.07);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  color: white;
+  font-size: clamp(10px, 2.5vw, 11px); /* clamp */
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Icon */
+.app-card img {
+  width: clamp(90px, 18vw, 110px); /* clamp */
+  margin-bottom: 18px;
+  border-radius: 22px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Text */
+.app-card h3 {
+  font-size: clamp(18px, 4.5vw, 22px); /* clamp */
+  margin-bottom: 8px;
+}
+
+.app-card p {
+  font-size: clamp(14px, 3.5vw, 16px); /* clamp */
+  color: #475569;
+}
+
+/* Button */
+.app-card a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: clamp(14px, 3.5vw, 16px); /* clamp */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 22px;
+  opacity: 0.85;
+}
